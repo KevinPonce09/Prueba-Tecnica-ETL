@@ -1,0 +1,41 @@
+# Informe de Resultados - ETL con PySpark
+
+## 1. Arquitectura de Datos y Arquetipo de la Aplicación
+La aplicación ETL sigue un diseño modular con **PySpark**, permitiendo procesamiento distribuido y escalable. La arquitectura consta de:
+
+- **Extracción:** Carga los datos desde un archivo Excel (`Films2.xlsx`).
+- **Transformación:** Limpieza de datos, eliminación de duplicados y chequeo de calidad.
+- **Carga:** Almacenamiento en formato **CSV**.
+- **Observabilidad:** Logging para rastreo de errores y ejecución.
+
+## 2. Análisis Exploratorio de Datos
+Se identificaron las siguientes características en los datos:
+- **Columnas con valores nulos:** Se detectaron y eliminaron registros con datos incompletos.
+- **Duplicados:** Se removieron registros repetidos para evitar sesgo en el análisis.
+- **Distribución de datos:** Se observó la cantidad de registros por categoría para detectar posibles anomalías.
+
+## 3. Preguntas de Negocio y Respuestas
+1. **¿Cuántas películas hay por género?**
+   - Se agruparon registros por columna `genre`.
+   
+2. **¿Cuáles son los directores con más películas en la base de datos?**
+   - Se realizó un conteo de registros por `director`.
+   
+3. **¿Cuál es la duración promedio de las películas?**
+   - Se calculó el promedio de la columna `duration`.
+   
+4. **¿Cuál es el año con mayor cantidad de estrenos?**
+   - Se agrupó por `release_year` y se contó el número de películas.
+   
+5. **¿Existen películas con información incompleta?**
+   - Se realizó un chequeo de calidad en los datos.
+
+## 4. Conclusiones
+- La implementación en **PySpark** permite manejar grandes volúmenes de datos eficientemente.
+- La limpieza y validación aseguran la **consistencia y calidad** de los datos.
+- Se lograron extraer insights útiles que pueden ayudar en la toma de decisiones empresariales.
+- Se recomienda almacenar los datos procesados en un **Data Warehouse** para futuros análisis.
+
+---
+✅ **Entrega Completa y Lista para Presentación.** 🚀
+

@@ -1,0 +1,43 @@
+# ETL con PySpark - Prueba Técnica Ingeniero de Datos
+
+## Descripción
+Este proyecto implementa una aplicación ETL en **PySpark**, capaz de procesar datos desde un archivo Excel (`Films2.xlsx`), realizar transformaciones, verificar la calidad de los datos y almacenar los resultados en formato CSV.
+
+## Requisitos
+Antes de ejecutar el proyecto, asegúrate de tener instalado lo siguiente:
+
+- Python 3.8+
+- Apache Spark
+- Librerías necesarias (instalar con pip):
+  ```sh
+  pip install pyspark openpyxl
+  ```
+
+## Estructura del Proyecto
+```
+ETL_Spark_Project/
+│── etl_spark.py  # Código principal de la ETL
+│── Films2.xlsx   # Archivo de datos (asegúrate de colocarlo en la raíz)
+│── output/       # Carpeta donde se guardará el CSV procesado
+│── README.md     # Documentación del proyecto
+│── informe.md    # Análisis y resultados de la ETL
+```
+
+## Ejecución
+Para ejecutar el pipeline ETL, usa el siguiente comando:
+```sh
+python etl_spark.py
+```
+
+## Justificación del Diseño
+- **Escalabilidad:** Uso de **PySpark** para manejar grandes volúmenes de datos.
+- **Modularidad:** Separación de responsabilidades (extracción, transformación, validación y carga).
+- **Buenas prácticas:** Implementación de **POO y SOLID**.
+- **Observabilidad:** Uso de **logs** para rastrear la ejecución.
+
+## Resultados
+El resultado final del procesamiento se guarda en `output/films_processed/` en formato **CSV**, listo para ser utilizado en análisis o integración con otros sistemas.
+
+## Contacto
+Si tienes dudas o mejoras, contáctame. 🚀
+
